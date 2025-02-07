@@ -1,6 +1,6 @@
 ---
-layout: about
-title: about
+layout: page
+title: test-page
 permalink: /test-page/
 subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
