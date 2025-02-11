@@ -312,9 +312,9 @@ ninja.data = [{
           window.location.href = "/blog/2021/diagrams/";
         
       },
-    },{id: "post-a-distill-style-blog-post",
+    },{id: "post-conditioning-of-linear-systems-and-loss-of-precision",
       
-        title: "a distill-style blog post",
+        title: "Conditioning of linear systems and loss of precision",
       
       description: "an example of a distill-style blog post and main elements",
       section: "Posts",
