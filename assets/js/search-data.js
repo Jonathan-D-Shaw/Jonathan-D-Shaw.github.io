@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "post-a-post-with-image-galleries",
+        },{id: "post-conditioning-of-linear-systems",
+      
+        title: "Conditioning of linear systems",
+      
+      description: "A formal analysis of sensitivity and loss of digits",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/distill/";
+        
+      },
+    },{id: "post-a-post-with-image-galleries",
       
         title: "a post with image galleries",
       
@@ -310,17 +321,6 @@ ninja.data = [{
       handler: () => {
         
           window.location.href = "/blog/2021/diagrams/";
-        
-      },
-    },{id: "post-conditioning-of-linear-systems-and-loss-of-precision",
-      
-        title: "Conditioning of linear systems and loss of precision",
-      
-      description: "an example of a distill-style blog post and main elements",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/blog/2021/distill/";
         
       },
     },{id: "post-a-post-with-twitter",
