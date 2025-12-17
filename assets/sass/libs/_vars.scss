@@ -29,36 +29,42 @@
 
 // Palette.
 	$palette: (
-		bg:					#f6f0e6,
-		fg:					#888,
-		fg-bold:			#777,
-		fg-light:			#aaa,
-		border:				#f4f4f4,
-		border-bg:			#fafafa,
-		border2:			#e4e4e4,
-		border2-bg:			#f4f4f4,
-		border3:			#e0e0e0,
-		border3-bg:			#eaeaea,
+  // Base
+  bg:         #f6f0e6,  // warm beige
+  fg:         #4a3b2d,  // body text (warm brown)
+  fg-bold:    #2a2118,  // headings/strong text (deep brown)
+  fg-light:   #6b5a4a,  // muted text (soft brown)
 
-		accent1: (
-			 bg: #8a5a2b,
-  			 fg-bold: #f6f0e6,
-  			 fg: mix(#8a5a2b, #ffffff, 25%),
-  			 fg-light: mix(#8a5a2b, #ffffff, 40%)
-		),
+  // Borders / surfaces (warm, not gray)
+  border:     rgba(42, 33, 24, 0.18),
+  border-bg:  rgba(42, 33, 24, 0.06),
+  border2:    rgba(42, 33, 24, 0.24),
+  border2-bg: rgba(42, 33, 24, 0.09),
+  border3:    rgba(42, 33, 24, 0.30),
+  border3-bg: rgba(42, 33, 24, 0.12),
 
-		accent2: (
-			 bg: #b07a43,         // secondary accent (tan/brown)
-  			 fg-bold: #f6f0e6,
-  		     fg: mix(#b07a43, #ffffff, 25%),
-  			 fg-light: mix(#b07a43, #ffffff, 40%)
-		),
+  // Accents
+  accent1: (
+    bg:       #8a5a2b,                         // primary earthy brown
+    fg-bold:  #f6f0e6,                         // beige text on accent
+    fg:       mix(#8a5a2b, #ffffff, 25%),
+    fg-light: mix(#8a5a2b, #ffffff, 40%)
+  ),
 
-		header: (
-  			 bg: #3b2a1a,         // dark brown header
-  			 fg-bold: #f6f0e6,
-  			 fg: mix(#3b2a1a, #ffffff, 25%),
-  			 fg-light: mix(#3b2a1a, #ffffff, 40%),
-  			 border: mix(#3b2a1a, #ffffff, 90%)
-		),
-	);
+  accent2: (
+    bg:       #b07a43,                         // secondary tan/brown
+    fg-bold:  #f6f0e6,
+    fg:       mix(#b07a43, #ffffff, 25%),
+    fg-light: mix(#b07a43, #ffffff, 40%)
+  ),
+
+  // Header
+  header: (
+    bg:       #3b2a1a,                         // dark brown header
+    fg-bold:  #f6f0e6,
+    fg:       mix(#3b2a1a, #ffffff, 25%),
+    fg-light: mix(#3b2a1a, #ffffff, 40%),
+    border:   mix(#3b2a1a, #ffffff, 90%)
+  ),
+);
+
