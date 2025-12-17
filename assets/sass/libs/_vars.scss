@@ -29,7 +29,7 @@
 
 // Palette.
 	$palette: (
-		bg:					#fff,
+		bg:					#f6f0e6,
 		fg:					#888,
 		fg-bold:			#777,
 		fg-light:			#aaa,
@@ -48,10 +48,10 @@
 		),
 
 		accent2: (
-			bg:				#989898,
-			fg-bold:		#ffffff,
-			fg:				mix(#989898, #ffffff, 25%),
-			fg-light:		mix(#989898, #ffffff, 40%)
+			 bg: #b07a43,         // secondary accent (tan/brown)
+  			 fg-bold: #f6f0e6,
+  		     fg: mix(#b07a43, #ffffff, 25%),
+  			 fg-light: mix(#b07a43, #ffffff, 40%)
 		),
 
 		header: (
