@@ -4,10 +4,10 @@
 permalink:           pretty
 
 # Setup
-title:               Fruzsina Agocs
+title:               Jonathan D. Shaw
 tagline:             'Research fellow in numerical analysis'
 description:         ''
-url:                 http://fruzsinaagocs.github.io
+url:                 http://jonathan-d-shaw.github.io
 baseurl:             ''
 plugins: 
     - jekyll-paginate
@@ -15,7 +15,7 @@ plugins:
 paginate:            5
 paginate_path: "page:num"
 twitter_username: "@astrofruzsi"
-github_username: "fruzsinaagocs"
+github_username: "jonathan-d-shaw"
 linkedin_username: "fruzsina-julia-agocs"
 # To render maths:
 #markdown: kramdown
@@ -26,9 +26,9 @@ include:
 
 # About/contact
 author:
-  name:              Fruzsina J Agocs
-  url:               https://fruzsinaagocs.github.io
-  email:             fagocs@flatironinstitute.org
+  name:              Jonathan D. Shaw
+  url:               https://jonathan-d-shaw.github.io
+  email:             jonathan.shaw@colorado.edu
 
 # Custom vars
 # version:             1.0.0
