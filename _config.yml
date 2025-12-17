@@ -1,0 +1,34 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+
+# Setup
+title:               Fruzsina Agocs
+tagline:             'Research fellow in numerical analysis'
+description:         ''
+url:                 http://fruzsinaagocs.github.io
+baseurl:             ''
+plugins: 
+    - jekyll-paginate
+    - jekyll-seo-tag
+paginate:            5
+paginate_path: "page:num"
+twitter_username: "@astrofruzsi"
+github_username: "fruzsinaagocs"
+linkedin_username: "fruzsina-julia-agocs"
+# To render maths:
+#markdown: kramdown
+#kramdown:
+#    math_engine: mathjax
+include:
+    - _static
+
+# About/contact
+author:
+  name:              Fruzsina J Agocs
+  url:               https://fruzsinaagocs.github.io
+  email:             fagocs@flatironinstitute.org
+
+# Custom vars
+# version:             1.0.0
