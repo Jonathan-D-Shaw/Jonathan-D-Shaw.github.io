@@ -27,44 +27,43 @@
 		weight-bold:		700
 	);
 
-// Palette.
+// Palette:
 	$palette: (
   // Base
-  bg:         #f6f0e6,  // warm beige
-  fg:         #4a3b2d,  // body text (warm brown)
-  fg-bold:    #2a2118,  // headings/strong text (deep brown)
-  fg-light:   #6b5a4a,  // muted text (soft brown)
+  bg:         #f6f0e6,  // sandstone / warm off-white
+  fg:         #2e2e2e,  // primary text (charcoal)
+  fg-bold:    #1f1f1f,  // headings / strong text
+  fg-light:   #6f6f6f,  // muted text
 
-  // Borders / surfaces (warm, not gray)
-  border:     rgba(42, 33, 24, 0.18),
-  border-bg:  rgba(42, 33, 24, 0.06),
-  border2:    rgba(42, 33, 24, 0.24),
-  border2-bg: rgba(42, 33, 24, 0.09),
-  border3:    rgba(42, 33, 24, 0.30),
-  border3-bg: rgba(42, 33, 24, 0.12),
+  // Borders / surfaces (warm neutral, not brown)
+  border:     rgba(46, 46, 46, 0.16),
+  border-bg:  rgba(46, 46, 46, 0.05),
+  border2:    rgba(46, 46, 46, 0.22),
+  border2-bg: rgba(46, 46, 46, 0.08),
+  border3:    rgba(46, 46, 46, 0.28),
+  border3-bg: rgba(46, 46, 46, 0.11),
 
   // Accents
   accent1: (
-    bg:       #8a5a2b,                         // primary earthy brown
-    fg-bold:  #f6f0e6,                         // beige text on accent
-    fg:       mix(#8a5a2b, #ffffff, 25%),
-    fg-light: mix(#8a5a2b, #ffffff, 40%)
+    bg:       #8a5a2b,                         // burnt umber (primary accent)
+    fg-bold:  #f6f0e6,                         // sandstone text on accent
+    fg:       mix(#8a5a2b, #ffffff, 22%),
+    fg-light: mix(#8a5a2b, #ffffff, 38%)
   ),
 
   accent2: (
-    bg:       #b07a43,                         // secondary tan/brown
-    fg-bold:  #f6f0e6,
-    fg:       mix(#b07a43, #ffffff, 25%),
-    fg-light: mix(#b07a43, #ffffff, 40%)
+    bg:       #c9a36a,                         // soft sand / brass
+    fg-bold:  #2e2e2e,
+    fg:       mix(#c9a36a, #2e2e2e, 20%),
+    fg-light: mix(#c9a36a, #2e2e2e, 40%)
   ),
 
   // Header
   header: (
-    bg:       #3b2a1a,                         // dark brown header
+    bg:       #262626,                         // charcoal header
     fg-bold:  #f6f0e6,
-    fg:       mix(#3b2a1a, #ffffff, 25%),
-    fg-light: mix(#3b2a1a, #ffffff, 40%),
-    border:   mix(#3b2a1a, #ffffff, 90%)
+    fg:       mix(#262626, #ffffff, 28%),
+    fg-light: mix(#262626, #ffffff, 42%),
+    border:   rgba(255, 255, 255, 0.08)
   ),
 );
-
