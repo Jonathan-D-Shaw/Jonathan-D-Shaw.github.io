@@ -14,9 +14,9 @@ plugins:
     - jekyll-seo-tag
 paginate:            5
 paginate_path: "page:num"
-twitter_username: "@astrofruzsi"
+twitter_username: "@jonathan_dshaw"
 github_username: "jonathan-d-shaw"
-linkedin_username: "fruzsina-julia-agocs"
+linkedin_username: "jonathan-d-shaw"
 # To render maths:
 #markdown: kramdown
 #kramdown:

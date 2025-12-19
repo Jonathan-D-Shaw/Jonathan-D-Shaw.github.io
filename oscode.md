@@ -47,9 +47,9 @@ evaluation.
 
 - developed in collaboration with Will Handley, Mike Hobson, and Anthony Lasenby (University of Cambridge, UK)
 - _paper_ <a href="http://dx.doi.org/10.1103/PhysRevResearch.2.013030" class="button primary small icon solid fa-external-link-alt">DOI</a> <a href="https://arxiv.org/abs/1906.01421" class="button primary small icon solid fa-external-link-alt">arXiv</a>
-- _slides_ <a href="https://fruzsinaagocs.github.io/images/IoA_Wednesday_talk.pdf" class="button primary small icon solid fa-download"></a> from a recent talk
+- _slides_ <a href="https://jonathan-d-shaw.github.io/images/IoA_Wednesday_talk.pdf" class="button primary small icon solid fa-download"></a> from a recent talk
 - _video summary_ <a href="https://www.youtube.com/watch?v=u7E82j8UIM4" class="button primary small icon solid fa-play"></a>
-- _open-source code_ (in C++ and Python) <a href="https://github.com/fruzsinaagocs/oscode" class="button primary small icon solid fa-external-link-alt">GitHub</a>
+- _open-source code_ (in C++ and Python) <a href="https://github.com/Jonathan-D-Shaw/oscode" class="button primary small icon solid fa-external-link-alt">GitHub</a>
 and its _documentation_ <a href="https://oscode.readthedocs.io/en/latest/introduction.html" class="button primary small icon solid fa-external-link-alt"></a>
 
 
@@ -99,7 +99,7 @@ More uses of `oscode` in math and physics:
 - work with Alex Barnett (Flatiron Institute)
 - _paper_ <a href="https://arxiv.org/abs/2212.06924" class="button primary small icon solid fa-external-link-alt">arXiv</a>
 - _slides_ <a href="{{ site.baseurl }}/images/riccati-slides.pdf" class="button primary small icon solid fa-download"></a>
-- _code repository_ <a href="https://github.com/fruzsinaagocs/riccati" class="button primary small icon solid fa-external-link-alt">GitHub</a> and _documentation_ <a href="https://riccati.readthedocs.io/en/latest/" class="button primary small icon solid fa-external-link-alt"></a>
+- _code repository_ <a href="https://github.com/Jonathan-D-Shaw/riccati" class="button primary small icon solid fa-external-link-alt">GitHub</a> and _documentation_ <a href="https://riccati.readthedocs.io/en/latest/" class="button primary small icon solid fa-external-link-alt"></a>
 
 `riccati` builds on some of the ideas behind `oscode`, but the underlying
 methods it chooses between (in oscillatory/nonoscillatory regions of the
