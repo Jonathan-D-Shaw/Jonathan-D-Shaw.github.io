@@ -57,71 +57,120 @@
 	// Header Panel.
 
 		// Nav.
-			var $nav_a = $nav.find('a');
+			var $nav_a = $nav.find('a'),
+				navLockTimeout = null;
 
 			$nav_a
-				.addClass('scrolly')
 				.on('click', function() {
 
 					var $this = $(this);
 
-					// External link? Bail.
-	//					if ($this.attr('href').charAt(0) != '#')
-                    	if ($this.attr('href').indexOf('#') < 0)
+					// Not a link to a section on this page? Bail.
+						if (!$this.hasClass('scrolly'))
 							return;
 
 					// Deactivate all links.
 						$nav_a.removeClass('active');
 
-					// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
+					// Activate link *and* lock it (so the scroll spy doesn't try to activate other links as we're scrolling to this one's section).
 						$this
 							.addClass('active')
 							.addClass('active-locked');
+
+					// Drop the lock once Scrolly's animation is over, in case we never
+					// arrive at the section (a link near the end of the page bottoms the
+					// window out before its section gets to the top).
+						window.clearTimeout(navLockTimeout);
+
+						navLockTimeout = window.setTimeout(function() {
+
+							$nav_a.removeClass('active-locked');
+							updateNav();
+
+						}, 1200);
 
 				})
 				.each(function() {
 
 					var	$this = $(this),
-						id = $this.attr('href'),
-						//$section = $(id);
-                        $section = id.charAt(0) == '#' ? $(id) : [];
+						href = $this.attr('href'),
+						hash = href.indexOf('#') > -1 ? href.substring(href.indexOf('#')) : '',
+						$section = hash.length > 1 ? $(hash) : $();
 
-					// No section for this link? Bail.
+					// No section for this link on this page? Bail (link navigates normally).
 						if ($section.length < 1)
 							return;
 
-					// Scrollex.
-						$section.scrollex({
-							mode: 'middle',
-							top: '5vh',
-							bottom: '5vh',
-							initialize: function() {
+					// Point the link at this page's section so Scrolly can take over,
+					// and hang on to the section so the scroll spy below can find it.
+						$this
+							.attr('href', hash)
+							.addClass('scrolly')
+							.data('section', $section);
 
-								// Deactivate section.
-									$section.addClass('inactive');
-
-							},
-							enter: function() {
-
-								// Activate section.
-									$section.removeClass('inactive');
-
-								// No locked links? Deactivate all links and activate this section's one.
-									if ($nav_a.filter('.active-locked').length == 0) {
-
-										$nav_a.removeClass('active');
-										$this.addClass('active');
-
-									}
-
-								// Otherwise, if this section's link is the one that's locked, unlock it.
-									else if ($this.hasClass('active-locked'))
-										$this.removeClass('active-locked');
-
-							}
-						});
+					// Deactivate section.
+						$section.addClass('inactive');
 
 				});
+
+		// Nav (scroll spy).
+		// Highlights the link whose section the reader is currently on: the last one
+		// starting above an imaginary line across the upper third of the viewport,
+		// with the final link pinned once we reach the bottom of the page (a short
+		// last section may never reach the line at all).
+			var $spy_a = $nav_a.filter('.scrolly');
+
+			if ($spy_a.length > 0) {
+
+				var updateNav = function() {
+
+					var scrollTop = $window.scrollTop(),
+						viewportHeight = $window.height(),
+						line = scrollTop + (viewportHeight * 0.35),
+						$active = null,
+						$locked;
+
+					$spy_a.each(function() {
+
+						var	$this = $(this),
+							top = $this.data('section').offset().top;
+
+						// Activate section once any part of it has been scrolled into view.
+							if (scrollTop + viewportHeight > top)
+								$this.data('section').removeClass('inactive');
+
+						// Last section above the line wins; the first one covers anything above it.
+							if (top <= line || $active === null)
+								$active = $this;
+
+					});
+
+					// At the bottom of the page? The last section wins outright.
+						if (scrollTop + viewportHeight >= $(document).height() - 2)
+							$active = $spy_a.last();
+
+					// A link is locked (we're mid-scroll to it)? Leave it be, and unlock
+					// it once we've actually arrived at its section.
+						$locked = $nav_a.filter('.active-locked');
+
+						if ($locked.length > 0) {
+
+							if ($locked.is($active))
+								$locked.removeClass('active-locked');
+
+							return;
+
+						}
+
+					$nav_a.removeClass('active');
+					$active.addClass('active');
+
+				};
+
+				$window.on('scroll load resize', updateNav);
+				updateNav();
+
+			}
 
 		// Title Bar.
 			$titleBar = $(
